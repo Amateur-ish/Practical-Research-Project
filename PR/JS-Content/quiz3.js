@@ -29,14 +29,15 @@ function nextQuestion(questionNumber) {
 // Submit the quiz and calculate the score
 function submitQuiz() {
   const form = document.getElementById('quizForm');
-  const dataStuff = document.getElementById('dataResult');
+  const resultDiv = document.getElementById('result');
+  
   // Correct answers
   const correctAnswers = {
-    q1: 'Hypertext Markup Language',
-    q2: 'Body',
-    q3: 'Head',
-    q4: 'Attributes',
-    q5: 'h1'
+    q1: 'correctans1',
+    q2: 'correctans2',
+    q3: 'correctans3',
+    q4: 'correctans4',
+    q5: 'correctnas5'
   };
 
   let score = 0;
@@ -50,11 +51,10 @@ function submitQuiz() {
     }
   }
 
-  // Easy way out to submit forms 
-  dataStuff.value = score;
-  alert(dataStuff.value);
+  // Display result
+  resultDiv.textContent = `You scored ${score} out of ${totalQuestions}.`;
+  resultDiv.style.color = score === totalQuestions ? 'green' : 'red';
 }
 
 // Initialize the quiz by showing the first question
 showQuestion(currentQuestion);
-

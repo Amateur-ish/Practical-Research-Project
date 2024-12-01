@@ -89,12 +89,16 @@ body {
     font-weight: bold;
   }
   
-  .result {
-    display: none; /* Hide all questions initially */
-    margin-bottom: 30px;
-  }
-  
-  .result p {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
+ #q4kupal {
+    display: block;
+    margin: 0 auto;
+    border: 3px solid darkblue;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat';
+    width: 40%;
+    height: auto;
+    justify-content: center;
+    overflow: hidden;
+ }

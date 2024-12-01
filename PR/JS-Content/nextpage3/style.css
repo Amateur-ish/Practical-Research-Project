@@ -51,8 +51,10 @@ header .logo {
 }
 
 .no1 {
-    margin-top: 10vh;
-    margin-left: 10vh;
+  text-align: left;
+  
+    margin-top: 16vh;
+    margin-left: 20vh;
 }
 .no2 {
     margin-left: 2vh;
@@ -66,8 +68,10 @@ header .logo {
 }
 
 .no4 {
-  margin-top: -19vh;
-  margin-left: 110vh;
+  text-align: left;
+  align-items: center;
+  margin-top: -28vh;
+  margin-left: 12vh;
 }
 
 
@@ -76,13 +80,18 @@ header .logo {
     margin-left: 100vh;
 }
 .example {
-    margin-left: 10vh;
-    margin-top: 1vh;
+  position: relative;
+  bottom: 80px;
+  left: 100px;
+    align-items: center;
+    text-align: center;
 }
 #editor {
+  align-items: center;
     display: absolute;
-    margin-left: 10vh;
-    margin-top: 2vh;
+    position: relative;
+    margin-left: 85vh;
+    bottom: 30px;
     width: 30%;
     height: 300px;
     font-family: monospace;
@@ -95,6 +104,8 @@ header .logo {
 .example1 {
   margin-left: 110vh;
   margin-top: -38vh;
+  text-align: center;
+  align-items: center;
 }
 #editor1 {
   display: absolute;
@@ -257,3 +268,26 @@ header .logo {
     }
   }
   
+
+  .link-button {
+    font-family: 'Pixelify Sans';
+    height: auto;
+    padding: 20px 40px;
+    background-color: #6cfd90;
+    color: rgb(15, 15, 15);
+    border: none;
+    border-radius: 5px;
+    font-size: 25px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border: 3px solid rgb(5, 5, 5);
+    position: relative;
+    left: 700px;
+    top: 80px;
+  } 
+    
+  .link-button:hover {
+    background-color: #fd3b3b;
+    color: rgb(240, 240, 240);
+  } 

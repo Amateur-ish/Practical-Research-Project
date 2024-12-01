@@ -141,5 +141,28 @@ header #logout:hover {
     background-color: red;
     color: white;
     border: 2px black solid;
+
 }
+
+.user-stats {
+    position: relative;
+    width: 80%;
+    background-color: white;
+    margin: 200px 0px 0px 150px;
+    padding-bottom: 150px;
+    border: black 2px solid;
+    border-radius: 10px;
+}
+
+.user-stats #quizcount {
+    margin: auto;
+}
+
+.user-stats .user-data {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
 

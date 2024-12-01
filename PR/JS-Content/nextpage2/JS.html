@@ -18,24 +18,24 @@
 
   <h1 style="text-align: center;">Programming with Javascript!</h1>
 
-  <p class="no1">b. External JavaScript<br><br>
+  <p class="no1">4. Basic Concepts<br><br>
 
-    JavaScript is written in a separate file with a .js extension and linked to the HTML document.<br><br>
-    Contents of script.js:<br><br>
-    // This is external JavaScript
-    function greet() {
-      alert("Hello, World!");
-    }</p><br>
+    a. Variables<br><br>
+    Containers for storing data.
+    Declared using let, const, or var
     
-    <p class="no4">3. Writing Comments in JavaScript<br><br>
-      
+    <p class="no4">b. Data Types<br><br>
+
     
       
-      Comments are ignored by the browser and used to document code.<br><br>
-      Single-line comment: Starts with //.<br><br>
-      Multi-line comment: Enclosed between /* and */.
 
-     
+      String: Text, e.g., "Hello"<br>
+      Number: Integers or decimals, e.g., 42, 3.14<br>
+      Boolean: true or false<br>
+      Null: Intentional absence of a value<br>
+      Undefined: A variable declared but not assigned<br><br>
+      c. Functions<br><br>
+      Block of reusable code.
        </p><br>
           
       
@@ -46,11 +46,15 @@
       <h1 class="example">Example</h1>
       <textarea id="editor" placeholder="Write your HTML, CSS, or JavaScript code here...">
         <head>
-          <title>External JavaScript Example</title>
-          <script src="script.js"></script>
+         
+          <script>
+          let name = "Alice";  // Can be reassigned
+            const age = 25;      // Cannot be reassigned
+            var city = "Paris";  // Legacy keyword
+    
+          </script>
         </head>
-        <body>
-          <button onclick="greet()">Click Me</button>
+        
 
           
         
@@ -60,17 +64,10 @@
       <h1 class="example1">Example</h1>
       <textarea id="editor1" placeholder="Write your HTML, CSS, or JavaScript code here...">
           <script>
-           
-          // This is a single-line comment
-          let x = 5; // Declare a variable
-
-          
-          /*
-           This is a multi-line comment.
-            Useful for longer descriptions.
-          */
-          let y = 10;
- 
+          function sayHello() {
+          console.log("Hello, World!");
+          }
+          sayHello();  // Output: Hello, World!
           </script>
       
         
@@ -81,7 +78,7 @@
      
       <script src="script.js"></script>
 
-     <a href="/js-content/nextpage2/JS.html"> <div class="buttons">
+     <a href="/js-content/nextpage3/JS.html"> <div class="buttons">
         <button class="blob-btn" s>
           Next
           <span class="blob-btn__inner">

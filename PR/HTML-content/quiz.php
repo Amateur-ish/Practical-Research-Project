@@ -1,3 +1,10 @@
+<?php
+  include 'C:\xampp\htdocs\PR\database.php';
+  session_start();
+  // If the user already has taken the quiz then show their results.
+  
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +21,17 @@
 
     <div class="quiz-body">
     <div class="quiz-container">
-        <h1>Test your knowledge on HTML!</h1>
-        <form id="quizForm">
+        <h1 id="title-h1">
+        <?php
+        if ($_SESSION['quizOne'] == NULL) {
+          echo "Test your knowledge on HTML!";
+        }
+        else {
+          echo "Quiz Results:";
+        }
+        ?>
+        </h1>
+        <form id="quizForm" action="quiz.php" method="post">
           <div class="question" id="q1">
             <p>1. What does HTML stands for?</p>
             <div class="options">
@@ -64,19 +80,62 @@
             <p>Which of the following is the tag for the HTML below?</p>
             <h1>Hello!</h1>
             <div class="options">
+              
               <label><input type="radio" name="q5" value="p"> p</label>
               <label><input type="radio" name="q5" value="h1"> h1</label>
               <label><input type="radio" name="q5" value="h2"> h2</label>
               <label><input type="radio" name="q5" value="Header"> Header</label>
-            </div>
-            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
-
-        </form>
-        <div id="result"></div>
+              <input type="text" id="dataResult" name="dataResult" value="" style="display: none;">
+              <button type="submit" onclick="submitQuiz()" name="submit" id="submit">Submit Quiz</button>
+          </div>
+          <div class="question" id="full-result">
+            <p> You got 
+              <?php
+              echo $_SESSION['quizOne'];
+              ?>
+            </p>
+          </div> 
+      </form>
       </div>
-    </div>
 </div>
+<script src="quiz.js"></script>
+<?php
+  if ($_SESSION['quizOne'] == NULL){
 
-  <script src="quiz.js"></script>
+  }
+  else {
+    echo "<script> 
+    const allQuestions = document.querySelectorAll('.question');
+    const quizOverall = document.querySelector('#full-result');
+
+
+    setTimeout(() => {
+    allQuestions.forEach((question, index) => {
+      question.style.display = 'none';
+      quizOverall.display = 'block';
+  });
+    
+  }, 1000);
+    </script>";
+  }
+?>
 </body>
 </html>
+
+<?php
+  // AAAAAAAAAA THE CRAMMING IS SO REAL
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if(isset($_POST['submit'])) {
+      sleep(5);
+      $username = $_SESSION['username'];
+      $score = $_POST['dataResult'];
+      $sql = "UPDATE quiz_data SET quiz_1 = $score WHERE username = '$username' ";
+      $result = "SELECT * FROM quiz_data WHERE username='$username'";
+      mysqli_query($conn, $sql);
+      $data = mysqli_query($conn, $result);
+      $newData = mysqli_fetch_assoc($data);
+      $_SESSION['quizOne'] = $newData['quiz_1'];
+      header("location: /pr/HTML-Content/quiz.php"); 
+    }
+}
+?>

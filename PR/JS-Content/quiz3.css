@@ -89,12 +89,8 @@ body {
     font-weight: bold;
   }
   
-  .result {
-    display: none; /* Hide all questions initially */
-    margin-bottom: 30px;
-  }
-  
-  .result p {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
+
+
+ #q2 p {
+    text-align: center;
+ }
