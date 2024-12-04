@@ -52,7 +52,7 @@ if ($_SESSION['username'] === NULL) {
                 </progress>";
                 break;
             case 1:
-                echo "<progress id='quizcount' value='40' max='100'> 
+                echo "<progress id='quizcount' value='30' max='100'> 
                 </progress>";
                 break;
 

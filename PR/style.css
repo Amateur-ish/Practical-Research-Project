@@ -6,15 +6,16 @@
     padding: 0;
 }
 body {
-  display: relative;
+  background-color:  #dceefc !important;
+  position:relative;
   font-size: 2vmin;
   font-family:Arial, Helvetica, sans-serif;
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh;
+  width: 100vh; */
   justify-content: center;
   align-items: center;
-  background-color: #dceefc;
-  overflow: hidden;
+  
+  /*   overflow: hidden; */
 
 }
 
@@ -36,21 +37,22 @@ header  a {
   position: relative;
   font-family: 'Pixelify Sans';
   font-size: 25px;
-  font-weight: 600;
+  font-weight: 600px;
 }
 
 a:hover {
   color: #0d7ec0;
 }
 
-
+#heading-thing h5 {
+  font-family: 'Pixelify Sans';
+}
 .slogan{
   font-family: 'Pixelify Sans';
-  font-size: 50px;
-  margin-left: 20px;
-  padding: 50px;
-  margin-top: 10vmin;
-  display: flex;
+  font-size: 30px;
+  /* margin-left: 20px; */
+
+  /* margin-top: 10vmin; */
   position: relative;
   z-index: 2;
 }
@@ -58,9 +60,9 @@ a:hover {
 h3 {
   font-family: 'Pixelify Sans';
   font-size: 20px;
-  margin-left: 25px;
+  /* margin-left: 25px;
   margin-top: -8vmin;
-  padding: 45px;
+  padding: 45px; */
   width: 40%;
   font-weight: 100;
   z-index: 2;
@@ -75,16 +77,17 @@ header .logo {
 }
 
 
-
-.container{
-
+.account-login{
+    position: relative;
     background:#fff;
     width:450px;
     padding:1.5rem;
-    margin: -225px 65rem;
     border-radius:10px;
+    margin: 0px auto;
     box-shadow:0 20px 35px rgba(0,0,1,0.6);
+    z-index: 1;
 }
+
 form{
     margin:0 2rem;
 }
@@ -148,7 +151,7 @@ input:focus~label,input:not(:placeholder-shown)~label{
     color:blue;
     text-decoration:underline;
 }
-.btn{
+.bton{
     font-size:1.1rem;
     padding:8px 0;
     border-radius:5px;
@@ -162,7 +165,7 @@ input:focus~label,input:not(:placeholder-shown)~label{
     position: relative;  /* Add positioning */
     z-index: 2;     
 }
-.btn:hover{
+.bton:hover{
     background:#07001f;
 }
 .or{
@@ -209,61 +212,72 @@ button:hover{
     color:blue;
 }
 
+#heading-thing {
+    position: relative;
+    z-index: 2;
+}
+
 #About-Us {
     height: 200px;
-    margin: 600px 0px 400px 0px;
-    position: fixed; /* Ensure it's positioned relative to the page */
+    /* margin: 600px 0px 400px 0px; */
+    /* position: fixed;  Ensure it's positioned relative to the page */
+    margin-top: 100px;
+    position: relative;
+  
     z-index: 1;
-
-    
-  }
+}
   
-  #About-Us h5 {
+#About-Us h5 {
     margin-left: 60px;
-   bottom:15vh;
-    position: fixed;
-  }
+    /* position: fixed; */
+    position: relative;
+}
   
+
   
-  
-  .about-title {
+.about-title {
     font-family: 'Pixelify Sans';
-    font-size: 50px;
-    position: fixed;
-    bottom: 30vh;
-    margin-left: 59px;
-  }
+    font-size: 30px;
+    /* position: fixed; *
+    position: relative;
+    /* margin-left: 59px; */
+}
   
   .about-desc {
     font-family: 'Pixelify Sans';
     font-size: 20px;
-    text-align: left;
     position: relative;
-    bottom: 450px;
+    /* bottom: 450px; */
     font-weight: 100;
-    margin-top: 20px;
-  }
+ 
+}
   
+#heading-thing {
+    position: relative;
+   
+}
 
   
-  .string {
+.string {
     display: flex;
     flex-direction: column;
     margin-top: -13vh;
-    margin-left: 27.5rem;
+    /* margin-left: 27.5rem; */
     animation: move 4s infinite;
-
 }
+
 .greeting {
     position: relative;
-    top: 8.6vmin;
+    top: 6.7vmin;
+    left: 276px;
     animation: with-out 5s infinite;
 }
 
 .closure {
     position: relative;
-    margin-top: -12.3vh;
-    margin-left: 46.7rem;
+    margin-top: -16vh;
+    margin-left: 37rem;
+    font-size: 30px;
 }
 .closure::after {
     content: '';
@@ -271,7 +285,7 @@ button:hover{
     height: 25vmin;
     width: 40vmin;
     background-color:  #dceefc;
-    transform: translate(-40vmin, -24.5vmin);
+    transform: translate(-38vmin, -25vmin);
     z-index: 1;
 }
 
@@ -281,7 +295,7 @@ button:hover{
     height: 25vmin;
     width: 40vmin;
     background-color:  #dceefc;
-    transform: translate(-40vmin, 5vmin);
+    transform: translate(-38vmin, 5vmin);
     z-index: 1;
 }
 
@@ -314,5 +328,68 @@ button:hover{
     
     75%{
         transform: translateY(-16.5vmin);
+    }
+}
+
+
+#the-main-content {
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+
+#system-name {
+    font-size: 30px;
+}
+
+@media (max-width: 1900px) {
+    #system-name {
+        display: none;
+    }
+    .greeting {
+        display: none;
+    }
+    .closure {
+        display: none;
+    }
+    .string {
+        display: none;
+    }
+}
+
+@media (max-width: 677px) {
+
+    .login-content {
+        padding-top: 100px;
+    }
+    .account-login{
+        position: relative;
+        background:#fff;
+        width:350px;
+        padding:1.2rem;
+        border-radius:10px;
+        margin: 0px auto;
+        box-shadow:0 20px 35px rgba(0,0,1,0.6);
+        z-index: 1;
+    }
+
+    #About-Us {
+        margin-top: 50px;
+    }
+
+    .about-title {
+        font-family: 'Pixelify Sans';
+        font-size: 23px;
+        /* position: fixed; */
+        position: relative;
+        /* margin-left: 59px; */
+    }
+      
+      .about-desc {
+        font-family: 'Pixelify Sans';
+        font-size: 17px;
+        position: relative;
+        /* bottom: 450px; */
+        font-weight: 100;
+     
     }
 }

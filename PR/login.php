@@ -30,20 +30,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $data = mysqli_fetch_assoc($result2);
         // Lol holy global variable spam
         $_SESSION['username'] = $username;
-        $_SESSION['quizOne'] = $data['quiz-1'];
-        $_SESSION['quizTwo'] = $data['quiz-2'];
-        $_SESSION['quizThree'] = $data['quiz-3'];
-        $_SESSION['quizCount'] = $data['quiz-completion'];
+        $_SESSION['quizOne'] = $data['quiz_1'];
+        $_SESSION['quizTwo'] = $data['quiz_2'];
+        $_SESSION['quizThree'] = $data['quiz_3'];
+        $_SESSION['quizCount'] = $data['quiz_completion'];
         redirect_to('/pr/options/options.php');
         exit();
       }
       else {
         redirect_to('/pr/');
+        exit();
         }
     }
     else {
       
       redirect_to('/pr/');
+      exit();
     }
   }
 }
