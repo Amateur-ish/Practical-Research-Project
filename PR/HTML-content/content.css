@@ -4,7 +4,7 @@
 body {
   font-family: 'Pixelify Sans';
   font-size: 15pt;
-  background-color: #dceefc;
+  background-color: #dceefc !important;
   overflow-x: hidden; 
 }
 
@@ -23,11 +23,106 @@ header .logo {
     margin-top: 15px;
     margin-left: 15px;
 }
+.burger-menu {
+    display: none; /* Hidden on desktop by default */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Position in the top-right corner */
+}
 
-header .dropdown {
-    width: 15%;
-    padding: 20px 40px 0px 0px;
-    float: right;
+.burger-menu .line {
+    width: 100%;
+    height: 4px;
+    background-color: #1c1255;
+    border-radius: 5px;
+}
+
+/* Vertical Navbar Styles (Hidden by default) */
+.navbar {
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    width: 200px;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.navbar.active {
+    display: flex; /* Show when active */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #1c1255;
+    font-size: 20px;
+    padding: 10px 0;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    transform: scale(1.1);
+    background-color:#44cfa6 ;
+    border-radius: 10px;
+}
+
+/* Desktop Navbar (Horizontal) */
+@media (min-width: 769px) {
+    .burger-menu {
+        display: none; /* Hide burger menu on desktop */
+    }
+
+    .navbar {
+        display: flex; /* Horizontal navbar for desktop */
+        position: static;
+        flex-direction: row;
+        width: auto;
+        box-shadow: none;
+    }
+
+    .navbar a {
+        position: relative;
+        bottom: 100px;
+        left: 1200px;
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+}
+
+/* Mobile Navbar (Vertical) */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex; /* Show burger menu on mobile */
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%; /* Full width on mobile */
+        height: 100%; /* Full screen height on mobile */
+        background-color: transparent;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .navbar a {
+        font-size: 18px; /* Larger text for mobile */
+        padding: 15px 0; /* Add spacing for better touch experience */
+    }
 }
 
 .welcome {
@@ -513,3 +608,5 @@ button:hover {
       transform: translateZ(0) scale(1.4);
     }
   }
+
+  

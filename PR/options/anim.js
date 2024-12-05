@@ -6,11 +6,11 @@ $(document).ready(function() {
         if (variable >= 4) {
             variable = 0;
         }
-        $('#imageTransition').animate({opacity: 0}, "slow");
+        $('#black-shade').animate({opacity: 0}, "slow");
         setTimeout(()=>{
             console.log(variable)
-            $('#imageTransition').attr('src', arrayImage[variable]);
-            $('#imageTransition').animate({opacity: 0.3}, "slow");
+            $('#welcome-section').css('background-image:', 'url(' + arrayImage[variable] + ')' );
+            $('#black-shade').animate({opacity: 0.7}, "slow");
             console.log("fired");
             console.log(variable)
             variable++

@@ -15,7 +15,8 @@ if ($_SESSION['username'] === NULL) {
     <link rel="stylesheet" href="options.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"> </script>
-    <script src="anim.js"> </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <!--<script src="anim.js"> </script> -->
 </head>
 <body>
     <header>
@@ -25,24 +26,39 @@ if ($_SESSION['username'] === NULL) {
             <button type="submit" value="logout" name="logout" id="logout">Log Out</button>
         </form>
     </header>
+
+    <div class="container-fluid" id="welcome-section">
+        <h1>
+            Welcome 
+            <?php
+                echo $_SESSION['username'] . "!";
+            ?>
+            <br>
+            <span style="font-size: 25px; font-weight: normal;">Hone your skills and start your coding journey today!</span>
+        </h1>
+
+        <div class="container-fluid" style="position: absolute" id="black-shade">
+
+        </div>
+    </div>
         
-    <div class="welcome-page"> 
+    <!-- <div class="welcome-page"> 
         <h1>
             <?php
-                echo "Welcome " . $_SESSION['username'] . "!";
+                //echo "Welcome " . $_SESSION['username'] . "!";
             ?>
         </h1>
         <img src="business.jpeg" id="imageTransition">
         <h1 id="quote">Hone your skills. Learn and craft your own website.</h1>
-    </div>
+    </div> -->
 
-    <div class="cards">
-        <div class="html-card"></div>
-        <div class="css-card"></div>
-        <div class="js-card"></div>
+    <div class="container-fluid cards d-flex justify-content-around">
+        <img src="html-card.png" class="html-card nav-cards img-fluid mx-3">        
+        <img src="css-card.png" class="css-card nav-cards img-fluid mx-3">
+        <img src="js-card.png" class="js-card nav-cards img-fluid mx-3">
     </div>
 <!-- User Statistics I swear to God -->
-    <div class="user-stats">
+    <div class="card user-stats">
         <h1>User Dashboard</h1>
         <p> Quiz Progress:</p>
         <?php
@@ -111,6 +127,8 @@ if ($_SESSION['username'] === NULL) {
             </div>
         </div>
     </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="switch.js"> </script>
 </body>
 </html>

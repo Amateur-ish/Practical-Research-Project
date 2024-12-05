@@ -4,8 +4,8 @@
 
 
 body {
-  font-size: 15pt;
-  background-color: #dceefc;
+  font-size: 15px;
+  background-color: #dceefc !important;
 }
 
 header h1.logo-text {
@@ -24,6 +24,37 @@ header .logo {
     margin-left: 15px;
   }
   
+#welcome-section {
+    position: relative;
+    background-image: url('business-a.jpg');
+    background-size: 2100px;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
+    z-index: 0;
+}
+
+#welcome-section h1{
+    position: absolute;
+    color:white;
+    width: 50%;
+    top: 180px;
+    left: 100px;
+    z-index: 2;
+}
+
+
+
+#welcome-section #black-shade{
+    background-color: black;
+    width: 100%;
+    height: 600px;
+    left: 0;
+    opacity: 0.7;
+    z-index: 1;
+    
+}
+
 
 
 .cards {
@@ -31,39 +62,19 @@ header .logo {
     justify-content: space-around;
     position: relative; 
     top: 100px;
-    
+    margin-bottom: 200px;
+    overflow-x: auto;
 }
 
-.html-card {
-    width: 405px;
-    height: 506px;
-    display: flex;
-    border-radius: 40px;
-    background-image: url(html\ card.png);
+.nav-cards {
+    max-width: 100%;
+    border-radius: 20px 20px 0px 0px;
     position: relative;
     right: 0px;
-    border: 7px solid black;
+    border: 2px black solid;
 }
 
-.css-card {
-    width: 405px;
-    height: 506px;
-    display: flex;
-    border-radius: 40px;
-    background-image: url(css\ card.png);
-    position: relative;
-    border: 7px solid black;
-}
 
-.js-card {
-    width: 405px;
-    height: 506px;
-    display: flex;
-    border-radius: 40px;
-    background-image: url(js\ card.png);
-    position: relative;
-    border: 7px solid black;
-}
 
 .html-card:hover {
     background-color: black;
@@ -81,46 +92,6 @@ header .logo {
     background-color: black;
     transform: scale(0.7);
     transition: 1100ms;
-}
-
-.welcome-page{
-    background-color: white;
-    border: 2px black solid;
-    border-radius: 20px;
-    box-shadow: 20px 15px rgba(0, 0, 0, 0.4);
-    width: 55%;
-    margin: 0px 0px 0px 400px;
-    padding: 5px 10px 15px 30px;
-}
-
-.welcome-page::before {
-    content: "";
-    position: absolute;
-    background-color: black;
-    margin: 100px 0px 0px 70px;
-    padding-bottom: 125px;
-    width: 44.5%;
-    height: 40%;
-}
-
-.welcome-page #imageTransition {
-    position: relative;
-    max-width: 900px;
-    margin-left: 70px;
-    opacity: 0.3;
-
-}
-
-.welcome-page #quote {
-    position: absolute;
-    color: white;
-    top: 400px;
-    margin-left: 150px;
-    font-size: 30px;
-}
-
-.welcome-page h1 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 header #logout {
@@ -148,7 +119,7 @@ header #logout:hover {
     position: relative;
     width: 80%;
     background-color: white;
-    margin: 200px 0px 0px 150px;
+    margin: auto;
     padding-bottom: 150px;
     border: black 2px solid;
     border-radius: 10px;

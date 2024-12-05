@@ -11,8 +11,6 @@ const preset = `<!DOCTYPE html>
   </body>
 </html>
 `;
-input.value = preset;
-
 
 function openEditor(){
     console.log("Opening the Editor...")
@@ -25,8 +23,10 @@ function editEditor() {
     Output.write(input.value);
     Output.close();
 }
-
 executeButton.onclick = editEditor
+editEditor();
+input.value = preset;
 editor.addEventListener("click", openEditor);
+
 
 // Di ko ma post yung JS so copypaste mo itong text
