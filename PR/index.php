@@ -27,7 +27,7 @@ if(array_key_exists('username', $_SESSION)) {
     
   </header>
 <div class="container" id="the-main-content">
-<div class="row">
+<div class="row align-items-center">
 <div class="col-md-6">
   <div id="heading-thing">
     <h4 class="slogan">Craft your Dream Web!</h4>
@@ -52,7 +52,7 @@ if(array_key_exists('username', $_SESSION)) {
   </h5>
  </div>
 </div>
-<div class="col-md-6 mt-sm-5" >
+<div class="col-md-6 mt-sm-5 mt-5" >
   <div class="account-login" id="signup" style="display:none;">
     <h1 class="form-title">Register</h1>
     <form method="post" action="register.php">

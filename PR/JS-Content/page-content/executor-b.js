@@ -2,24 +2,9 @@ const editor = document.getElementById("editor");
 const input = document.getElementById("html-input");
 const Output = document.getElementById("htmlOutput").contentDocument;
 const executeButton = document.getElementById("execute");
-const preset = `<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      body 
-      {
-      background-color: cyan;
-      }
-    </style>
-  </head>
-  <body>
-    <h1> This is how you use CSS</h1>
-    <h2> The CSS selects and targets the body of the html and turns the background-color to Cyan.</h2> 
-  </body>
-</html>
-`;
-input.value = preset;
-
+const input_b = document.getElementById("html-input-b");
+const Output_b = document.getElementById("htmlOutput-b").contentDocument;
+const executeButton_b = document.getElementById("execute-b");
 
 function openEditor(){
     console.log("Opening the Editor...")
@@ -33,7 +18,15 @@ function editEditor() {
     Output.close();
 }
 
+function editEditor2() {
+  console.log("test")
+  Output_b.open()
+  Output_b.write(input_b.value);
+  Output_b.close();
+}
 executeButton.onclick = editEditor
+executeButton_b.onclick = editEditor2
 editor.addEventListener("click", openEditor);
+
 
 // Di ko ma post yung JS so copypaste mo itong text

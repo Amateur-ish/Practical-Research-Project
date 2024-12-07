@@ -29,7 +29,7 @@ function nextQuestion(questionNumber) {
 // Submit the quiz and calculate the score
 function submitQuiz() {
   const form = document.getElementById('quizForm');
-  const resultDiv = document.getElementById('result');
+  const dataStuff = document.getElementById('dataResult');
   
   // Correct answers
   const correctAnswers = {
@@ -50,10 +50,7 @@ function submitQuiz() {
       score++;
     }
   }
-
-  // Display result
-  resultDiv.textContent = `You scored ${score} out of ${totalQuestions}.`;
-  resultDiv.style.color = score === totalQuestions ? 'green' : 'red';
+  dataStuff.value = score;
 }
 
 // Initialize the quiz by showing the first question

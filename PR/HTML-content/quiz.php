@@ -1,7 +1,12 @@
 <?php
   include 'C:\xampp\htdocs\PR\database.php';
   session_start();
-  
+
+if ($_SESSION['username'] === NULL) {
+    header('location: /pr/');
+    exit();
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -65,12 +70,12 @@
           </div>
     
           <div class="question" id="q4">
-            <p>This provides HTML elements more detail and helps to control the behaviour.</p>
+            <p>This tag breaks and creates a new line for paragraphs.</p>
             <div class="options">
-              <label><input type="radio" name="q4" value="Attributes"> Attributes</label>
-              <label><input type="radio" name="q4" value="Semantic Element"> Semantic Element</label>
-              <label><input type="radio" name="q4" value="HTML Tags"> HTML Tags</label>
-              <label><input type="radio" name="q4" value="Reference"> Reference</label>
+              <label><input type="radio" name="q4" value="br">&lt;br&gt;<label>
+              <label><input type="radio" name="q4" value="hr">&lt;hr&gt;</label>
+              <label><input type="radio" name="q4" value="break">&lt;break&gt;</label>
+              <label><input type="radio" name="q4" value="rtrn"> &lt;rtrn&gt;</label>
             </div>
             <button type="button" onclick="nextQuestion(4)">Next</button>
           </div>
@@ -107,8 +112,6 @@
             </p>
             <a href="/pr/options/options.php" style="text-decoration: none;">
               <button onclick=""type="button">Back to Home Page</button>
-            </a>
-
           </div> 
       </form>
       </div>

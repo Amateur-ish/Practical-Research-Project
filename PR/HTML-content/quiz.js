@@ -35,7 +35,7 @@ function submitQuiz() {
     q1: 'Hypertext Markup Language',
     q2: 'Body',
     q3: 'Head',
-    q4: 'Attributes',
+    q4: 'br',
     q5: 'h1'
   };
 
@@ -52,7 +52,6 @@ function submitQuiz() {
 
   // Easy way out to submit forms 
   dataStuff.value = score;
-  alert(dataStuff.value);
 }
 
 // Initialize the quiz by showing the first question
