@@ -128,8 +128,10 @@ label{
     color:#757575;
     position:relative;
     left:1.2em;
-    top:-1.3em;
+    top:-1.8em;
     cursor:auto;
+    user-select: none;
+    pointer-events: none;
     transition:0.3s ease all;
 }
 input:focus~label,input:not(:placeholder-shown)~label{
@@ -228,7 +230,7 @@ button:hover{
 }
   
 #About-Us h5 {
-    margin-left: 60px;
+
     /* position: fixed; */
     position: relative;
 }

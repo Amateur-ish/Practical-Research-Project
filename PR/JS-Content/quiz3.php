@@ -15,6 +15,7 @@ if ($_SESSION['username'] === NULL) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Quiz</title>
+    <link rel="shortcut icon" href="/pr/images/webcraft_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="quiz3.css">
 </head>
 <body>
@@ -28,7 +29,7 @@ if ($_SESSION['username'] === NULL) {
         <h1>
           <?php
                   if ($_SESSION['quizThree'] == NULL) {
-                    echo "Test your knowledge on HTML!";
+                    echo "Test your knowledge on JavaScript!";
                   }
                   else {
                     echo "Quiz Results:";

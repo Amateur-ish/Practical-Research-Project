@@ -15,6 +15,7 @@ if ($_SESSION['username'] === NULL) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Quiz</title>
+    <link rel="shortcut icon" href="/pr/images/webcraft_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="quiz.css">
 </head>
 <body>

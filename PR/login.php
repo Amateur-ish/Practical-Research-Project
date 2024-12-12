@@ -38,13 +38,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
       }
       else {
-        redirect_to('/pr/');
+        echo "<script>alert('Invalid Password');
+            window.location.href='/pr/';
+            </script>";
         exit();
         }
     }
     else {
-      
-      redirect_to('/pr/');
+      echo "<script>alert('Invalid Username');
+      window.location.href='/pr/';
+      </script>";
       exit();
     }
   }

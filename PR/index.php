@@ -11,7 +11,7 @@ if(array_key_exists('username', $_SESSION)) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Webcraft</title>
+  <title>Webcraft</title>
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="images/webcraft_logo.png" type="image/x-icon">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@ if(array_key_exists('username', $_SESSION)) {
     <h4 class="slogan">Craft your Dream Web!</h4>
     <h5>Webcraft is a learning tool that teaches you basic Web Development including HTML,CSS and Javascript. </h5>    
   </div>
-  <h1 id="system-name"style="margin-left: 0vh; margin-top: 5vh;">System<span style="color: #e06c75;">.<span style="color: #e06c75;">out</span>.<span style="color: #61afef;">println</span></span>("</h1>
+  <h1 id="system-name"style="margin-left: 0vh; margin-top: 5vh;">document<span style="color: #e06c75;">.<span style="color: #e06c75;">write</span><span style="color: #61afef;">ln</span></span>("</h1>
   <div class="string">
       <h1 class="greeting hi1">Hello, World!</h1>
       <h1 class="greeting hi2">안녕하세요, 월드!</h1>
@@ -58,31 +58,25 @@ if(array_key_exists('username', $_SESSION)) {
     <form method="post" action="register.php">
       <div class="input-group">
          <i class="fas fa-user"></i>
-         <input type="text" name="username" id="fName" placeholder="Username" required>
+         <input type="text" name="username" id="fName" placeholder="Username"  required>
          <label for="fname">Username:</label>
       </div>
       <div class="input-group"> 
-          <i class="fas fa-envelope"></i>
-          <input type="email" name="email" id="email" placeholder="Email" required>
-          <label for="email">Email:</label>
+          <i class="fas fa-lock"></i>
+          <input type="password" name="password" id="password" placeholder="Password"  class="password-class"required>
+          <label for="email">Password:</label>
       </div>
       <div class="input-group">
           <i class="fas fa-lock"></i>
-          <input type="password" name="password" id="password" placeholder="Password" required>
-          <label for="password">Password:</label>
+          <input type="password" name="passwordRe" id="passwordRe" placeholder="Password"  class="password-class" required>
+          <label for="password">Repeat Password:</label>
       </div>
-     <input type="submit" class="bton" value="Sign Up" name="signUp">
+     <input type="submit" class="bton" value="Sign Up" name="signUp" id="signUp" disabled>
     </form>
-    <p class="or">
-      ----------or--------
-    </p>
-    <div class="icons">
-      <i class="fab fa-google"></i>
-      <i class="fab fa-facebook"></i>
-    </div>
-    <div class="links">
-      <p>Already Have Account ?</p>
-      <button id="signInButton">Sign In</button>
+
+    <div class="row links justify-content-center mt-5">
+      <p class="col-6">Already Have Account ?</p>
+      <button class="col-6 mb-3" id="signInButton">Sign In</button>
     </div>
   </div>
 
@@ -90,8 +84,8 @@ if(array_key_exists('username', $_SESSION)) {
       <h1 class="form-title">Sign In</h1>
       <form method="post" action="login.php">
         <div class="input-group">
-            <i class="fas fa-envelope"></i>
-            <input type="text" name="username1" id="email" placeholder="Username" required>
+            <i class="fas fa-user"></i>
+            <input type="text" name="username1" placeholder="Username" required>
             <label for="email">Username:</label>
         </div>
         <div class="input-group">
@@ -99,21 +93,13 @@ if(array_key_exists('username', $_SESSION)) {
             <input type="password" name="password1" id="password" placeholder="Password" required>
             <label for="password">Password:</label>
         </div>
-        <p class="recover">
-          <a href="#">Recover Password</a>
-        </p>
+
        <input type="submit" class="bton" value="Sign In" name="signIn">
       </form>
-      <p class="or">
-        ────────── or ──────────
-      </p>
-      <div class="icons">
-        <i class="fab fa-google"></i>
-        <i class="fab fa-facebook"></i>
-      </div>
-      <div class="links">
-        <p>Don't have account yet?</p>
-        <button id="signUpButton">Sign Up</button>
+
+      <div class="row links justify-content-center mt-5">
+        <p class="col-6">Don't have account yet?</p>
+        <button class="col-6 mb-3" id="signUpButton">Sign Up</button>
       </div>
     </div>
 </div>
@@ -121,8 +107,8 @@ if(array_key_exists('username', $_SESSION)) {
 </div>
 
 
-    <script src="script.js"></script>
-
+<script src="script.js"></script>
+<script src="repeatpassword.js"></script>
 </div>
 </div>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>

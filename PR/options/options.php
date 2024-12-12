@@ -11,7 +11,8 @@ if ($_SESSION['username'] === NULL) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webcraft</title>
+    <title>Webcraft: Home</title>
+    <link rel="shortcut icon" href="/pr/images/webcraft_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="options.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"> </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
@@ -32,7 +33,9 @@ if ($_SESSION['username'] === NULL) {
         </div>
     </header>
     <div class="container-fluid" style="padding-top: 175px">
-        <div class="container-fluid" id="welcome-section" style="padding: 0px 140px;">
+
+    </div>
+    <div class="container-fluid" id="welcome-section">
             <h1>
                 Welcome 
                 <?php
@@ -46,17 +49,7 @@ if ($_SESSION['username'] === NULL) {
 
         </div>
     </div>
-    </div>
         
-    <!-- <div class="welcome-page"> 
-        <h1>
-            <?php
-                //echo "Welcome " . $_SESSION['username'] . "!";
-            ?>
-        </h1>
-        <img src="business.jpeg" id="imageTransition">
-        <h1 id="quote">Hone your skills. Learn and craft your own website.</h1>
-    </div> -->
     <div class="container-fluid mt-5">
         <h1 class="ml-3">Select or Swipe to navigate</h1>
     </div>

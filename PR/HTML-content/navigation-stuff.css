@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+
+
+
 body {
     font-family: 'Pixelify Sans';
     font-size: 15pt;
@@ -8,6 +13,8 @@ body {
 
   header {
     background-color: #dceefc;
+    padding-bottom: 20px;
+    box-shadow: 3px 3px 15px black;
     z-index: 10;
   }
 
@@ -45,4 +52,12 @@ body {
       background-color: #1c1255;
       margin-top: 5px;
       border-radius: 5px;
+  }
+
+  .dropdown-divider {
+    border-top: 1px solid #000000 !important
+  }
+
+  .dropdown-header {
+    font-size: 1.1rem !important
   }
