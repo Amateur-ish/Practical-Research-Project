@@ -1,4 +1,4 @@
-$(document).ready(function() {
+    $(document).ready(function() {
     console.log("TEST IF WORKs")
     const arrayImage = ["airplane.jpeg", "cooking.jpg", "business.jpeg", "aaa.jpg"];
     let variable = 0;

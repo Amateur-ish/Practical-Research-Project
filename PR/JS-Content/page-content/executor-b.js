@@ -1,13 +1,8 @@
-const editor = document.getElementById("editor");
+
 const input = document.getElementById("html-input");
 const executeButton = document.getElementById("execute");
 const input_b = document.getElementById("html-input-b");
 const executeButton_b = document.getElementById("execute-b");
-
-function openEditor(){
-    console.log("Opening the Editor...")
-    editor.style.display = "none";
-}
 
 function editEditor() {
       // ang galing ko grabe
@@ -43,7 +38,7 @@ function editEditor2() {
 }
 executeButton.onclick = editEditor
 executeButton_b.onclick = editEditor2
-editor.addEventListener("click", openEditor);
+
 
 
 // Di ko ma post yung JS so copypaste mo itong text

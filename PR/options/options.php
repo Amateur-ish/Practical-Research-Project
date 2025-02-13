@@ -1,5 +1,6 @@
 <?php
 include 'C:\xampp\htdocs\PR\database.php';
+include 'C:\xampp\htdocs\PR\contentdatabase.php';
 session_start();
 if ($_SESSION['username'] === NULL) {
     header('location: /pr/');
@@ -14,6 +15,7 @@ if ($_SESSION['username'] === NULL) {
     <title>Webcraft: Home</title>
     <link rel="shortcut icon" href="/pr/images/webcraft_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="options.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"> </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <!--<script src="anim.js"> </script> -->
@@ -49,17 +51,104 @@ if ($_SESSION['username'] === NULL) {
 
         </div>
     </div>
-        
+    
     <div class="container-fluid mt-5">
         <h1 class="ml-3">Select or Swipe to navigate</h1>
     </div>
-    <div class="container-fluid cards d-flex justify-content-around">
-        <img src="html-card.png" class="html-card nav-cards img-fluid mx-3">        
-        <img src="css-card.png" class="css-card nav-cards img-fluid mx-3">
-        <img src="js-card.png" class="js-card nav-cards img-fluid mx-3">
+    <div class="container-fluid mb-4 ">
+        <div class="container-xl d-flex justify-content-around option-select">
+            <div class="mvment cards">
+                <!-- <img src="html-card.png" class="html-card nav-cards img-fluid mx-3">        
+                <img src="css-card.png" class="css-card nav-cards img-fluid mx-3">
+                <img src="js-card.png" class="js-card nav-cards img-fluid mx-3">
+                <img src="js-card.png" class="js-card nav-cards img-fluid mx-3">
+                <img src="js-card.png" class="js-card nav-cards img-fluid mx-3">
+                
+                    
+                -->
+
+                <div class="card" style="width: 18rem"> 
+                    <div class="img-card"></div>
+                    <h5 class="card-title"> Lorem Ipsum </h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dolorem, amet hic distinctio et error voluptas laboriosam laudantium velit non ipsam, nulla eligendi unde asperiores autem deleniti enim odit doloremque!
+                    </p>
+                    <button class="btn btn-primary mb-4 ml-4" style="width: 14rem"> Lorem Ipsum</button>
+                </div>
+                <div class="card" style="width: 18rem"> 
+                    <div class="img-card"></div>
+                    <h5 class="card-title"> Lorem Ipsum </h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dolorem, amet hic distinctio et error voluptas laboriosam laudantium velit non ipsam, nulla eligendi unde asperiores autem deleniti enim odit doloremque!
+                    </p>
+                    <button class="btn btn-primary mb-4 ml-4" style="width: 14rem"> Lorem Ipsum</button>
+                </div>
+                <div class="card" style="width: 18rem"> 
+                    <div class="img-card"></div>
+                    <h5 class="card-title"> Lorem Ipsum </h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dolorem, amet hic distinctio et error voluptas laboriosam laudantium velit non ipsam, nulla eligendi unde asperiores autem deleniti enim odit doloremque!
+                    </p>
+                    <button class="btn btn-primary mb-4 ml-4" style="width: 14rem"> Lorem Ipsum</button>
+                </div>
+                
+                <?php
+                // content loader
+                // Magulo na putanginang code
+                $sql = "SELECT * FROM `module_data` ";
+                $output = mysqli_query($connect, $sql);
+                $lesson_output = mysqli_query($connect, "SELECT * FROM `module_lessons`");
+                $customModuleCount = 0;
+
+                if(mysqli_num_rows($output)) {
+                    while (($row = mysqli_fetch_assoc($output)) && ($row2 = mysqli_fetch_assoc($lesson_output))) {
+                        $nameMod = $row2['module_name'];
+                        $lessonDes = $row2['lesson_desig'];
+                        ?>
+                        
+                        <div class="card" style="width: 18rem"> 
+                        <div class="img-card" id=<?php echo $row['module_desig']?> style=<?php $img = $row['module_img']; echo "\"background-image: url('$img')\"" ?> >
+                            
+                        </div>
+                        <h5 class="card-title"><?php echo $row['module_name']; ?></h5>
+                        <p class="card-text">
+                            <?php echo $row['module_desc'] ; ?>
+                        </p>
+                        <form action="/pr/customcreatedmodule/content-page.php" method="get">
+                            <input name="customModule"  value=<?php echo "\"$nameMod\""; ?>  style="display: none;">
+                            <button class="btn btn-primary mb-4 ml-4" style="position: absolute; width: 14rem; bottom: 1;" type="submit" name=<?php echo "$nameMod" ?> 
+                            >Go to Topic!</button>
+                        
+                        
+                        </form>
+                        <form action="/pr/adminpanel/lesson-edit.php" method="get">
+                            <input name="customModule"  value=<?php echo "\"$nameMod\""; ?>  style="display: none;">
+                            <button class="btn btn-success mb-4 ml-4" style="position: absolute; width: 14rem; bottom: 0;" type="submit" name=<?php echo "$nameMod" ?> 
+                            >EDIT</button>
+                        </form>
+                        </div>
+                    <?php
+                    }   
+                }
+
+                ?>
+                <div class="card" style="width: 18rem"> 
+                    <div class="img-card" style="background-image: url('team-building-clipart-md.png');"></div>
+                    <h5 class="card-title"> Create New Module </h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dolorem, amet hic distinctio et error voluptas laboriosam laudantium velit non ipsam, nulla eligendi unde asperiores autem deleniti enim odit doloremque!
+                    </p>
+                    <a href="/pr/adminpanel/module-create.html  "><button class="btn btn-primary mb-4 ml-4" style="width: 14rem"> Lorem Ipsum</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-around">
+            <i class="fa fa-arrow-left fa-2xl" id="arrowLeft" aria-hidden="true"></i>
+            <i class="fa fa-arrow-right fa-2xl" id="arrowRight" aria-hidden="true"></i>    
+        </div>
     </div>
 <!-- User Statistics I swear to God -->
-    <div class="card user-stats px-5">
+    <div class="card user-stats px-5" style="width: 70%">
         <h1>User Dashboard</h1>
         <p> Quiz Progress:</p>
         <?php

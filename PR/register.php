@@ -14,11 +14,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         else {
           $hash = password_hash($password, PASSWORD_DEFAULT);
-          echo $username . "<br>";
-          echo $password . "<br>";
           //echo $hash . "<br>";
-          $sql = "INSERT INTO user(username, password) 
-          VALUES ('$username', '$hash')";
+          $sql = "INSERT INTO user(username, password, role) 
+          VALUES ('$username', '$hash', 'DEFAULT-USER')";
             try {
             mysqli_query($conn, $sql);
             echo "<script>alert('You are now registered') </script>";

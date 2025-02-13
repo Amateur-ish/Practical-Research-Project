@@ -15,10 +15,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
       echo "<script>alert('Please input a username or password') </script>";
       exit();
     }
-    $sql = "SELECT * FROM user WHERE username='$username' ";
+    $sql = "SELECT * FROM user WHERE username='$username'";
     $sql2 = "SELECT * FROM quiz_data WHERE username='$username'";
     $result = mysqli_query($conn, $sql);
-
+    
 
     if(mysqli_num_rows($result) === 1) {
       $result2 = mysqli_query($conn, $sql2);
@@ -30,6 +30,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $data = mysqli_fetch_assoc($result2);
         // Lol holy global variable spam
         $_SESSION['username'] = $username;
+        $_SESSION['role'] = $row['role'];
         $_SESSION['quizOne'] = $data['quiz_1'];
         $_SESSION['quizTwo'] = $data['quiz_2'];
         $_SESSION['quizThree'] = $data['quiz_3'];

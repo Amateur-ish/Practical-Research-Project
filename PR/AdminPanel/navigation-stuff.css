@@ -4,7 +4,7 @@
 
 
 body {
-    font-family: 'Pixelify Sans';
+    
     font-size: 15pt;
     background-color: #dceefc !important;
     overflow-x: hidden; 
@@ -12,9 +12,9 @@ body {
 
 
   header {
-    background-image: linear-gradient(rgb(230, 243, 252), rgb(159, 224, 240));
+    background-color: #dceefc;
     padding-bottom: 20px;
-    box-shadow: 5px 5px 20px black;
+    box-shadow: 3px 3px 15px black;
     z-index: 10;
   }
 
@@ -28,12 +28,16 @@ body {
   header h1.logo-text {
     font-family: 'Pixelify Sans';
     font-size: 25px;
-    font-weight: 600;
     position: absolute;
-    top: 50px;
+    top: 38px;
     left: 140px;
     
   }
+
+  .dropdown-menu {
+    min-width: 400px !important;
+
+}
   
   .burger-menu {
       display: block; /* Hidden on desktop by default */
@@ -45,10 +49,6 @@ body {
       position: absolute;
       top: 30px;
       right: 20px; /* Position in the top-right corner */
-      transition: transform 0.3s ease !important;
-  }
-  .burger-menu:hover {
-    transform: scale(1.4);
   }
   
   .burger-menu .line {
@@ -67,36 +67,5 @@ body {
     font-size: 1.1rem !important
   }
 
-  .dropdown-menu {
-    background-image: linear-gradient(to bottom right,#c5f7f7, #5bc0c7)!important;
-    border-radius: 12px !important; 
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5) !important; 
-    padding: 10px 0;
-}
+  
 
-.dropdown-header {
-  text-align: center;
-  color: black !important;
-  font-family: Montserrat;
-  font-weight: 550;
-}
-
-.dropdown-item {
-  color: #fff; 
-  padding: 12px 20px; 
-  text-decoration: none; 
-  border-radius: 4px;
-  transition: background-color 0.3s ease; 
-}
-
-.dropdown-item:hover {
-  background-color: #ca6464 !important; 
-}
-
-#home {
-  font-family: Montserrat;
-  color: black;
-  font-weight: 550;
-  font-size: 18px;
-  text-align: center;
-}

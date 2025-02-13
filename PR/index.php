@@ -64,12 +64,16 @@ if(array_key_exists('username', $_SESSION)) {
       <div class="input-group"> 
           <i class="fas fa-lock"></i>
           <input type="password" name="password" id="password" placeholder="Password"  class="password-class"required>
+          
           <label for="email">Password:</label>
+          <p class="miniErrortext"id="securityCheck"></p>
       </div>
       <div class="input-group">
           <i class="fas fa-lock"></i>
           <input type="password" name="passwordRe" id="passwordRe" placeholder="Password"  class="password-class" required>
+          
           <label for="password">Repeat Password:</label>
+          <p class="miniErrortext"id="repeatCheck"></p>
       </div>
      <input type="submit" class="bton" value="Sign Up" name="signUp" id="signUp" disabled>
     </form>

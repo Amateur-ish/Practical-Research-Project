@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module Creation</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link rel="stylesheet" href="navigation-stuff.css">
+</head>
+<body>
+  <header class="container-fluid" style="position: fixed; z-index: 69; background-color: #dceefc;">
+    <div class="row">
+        <div class="col-6">
+            <h1 class="logo-text">Module Create</h1>
+            <img src="webcraft_logo.png" alt="" class="logo">
+        </div>
+        <div class="col-6">
+          <button class="btn btn-danger btn-right mt-4" type="submit" value="logout" name="logout" style="float: right; padding: 10px 30px">Go Back</button>
+        </div>
+    </div>
+  </header>
+  <div class="container-xl" style="padding-top: 250px">
+    <form method="post" action="module-creation.php"> <!-- Submission for the shit-->
+        <h1>Title</h1>
+        <input id="moduleTitle" type="text" name="module-title" style="width: 80%;" required>
+        <h1>Thumbnail (URL)</h1>
+        <input type="text" name="module-thumbnail" style="width: 80%;" required>
+        <h1>Description</h1>
+        <textarea name="module-desc" style="min-width: 100%; height: 200px" required> </textarea>
+        <input id="desig-autom" name="desig-autom" style="display: none">
+        <button type="submit" class="btn btn-primary"> Create New Module </button>
+      </form>
+    </div>
+  <script src="tanginangscript.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+</body>
+</html>

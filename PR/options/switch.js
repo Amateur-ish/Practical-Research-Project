@@ -1,19 +1,24 @@
-const htmlCard = document.querySelector('.html-card');
-const jsCard = document.querySelector('.js-card');
-const cssCard= document.querySelector('.css-card');
+const cardGroup = document.querySelector('.mvment');
+const arrowLeft = document.getElementById("arrowLeft");
+const arrowRight = document.getElementById("arrowRight");
+let currentPos = 0;
 
-function urlSwitchHTML() {
-    window.location.href = "/pr/HTML-content/html-page-1.php";
+
+function slideCardLeft() {
+    currentPos += 500
+    cardGroup.style.left = currentPos + "px";
 }
-function urlSwitchCSS() {
-    window.location.href = "/pr/CSS-content/css-page-1.php";
-}
-function urlSwitchJS() {
-    window.location.href = "/pr/JS-content/page-content/js-page.php";
+
+function slideCardRight() {
+    currentPos -= 500
+    console.log("TEST")
+    cardGroup.style.left = currentPos +"px";
 }
 
 console.log("hi hi hi")
 
-htmlCard.addEventListener("click", urlSwitchHTML);
+/* htmlCard.addEventListener("click", urlSwitchHTML);
 jsCard.addEventListener("click", urlSwitchJS);
-cssCard.addEventListener("click", urlSwitchCSS);
+cssCard.addEventListener("click", urlSwitchCSS); */
+arrowLeft.addEventListener("click", slideCardLeft);
+arrowRight.addEventListener("click", slideCardRight);

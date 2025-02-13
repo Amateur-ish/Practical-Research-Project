@@ -17,7 +17,7 @@ if ($_SESSION['username'] === NULL) {
   <link rel="stylesheet" href="content-style.css">
   <link rel="stylesheet" href="navigation-stuff.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <header class="container-fluid" style="position: fixed">
@@ -39,7 +39,7 @@ if ($_SESSION['username'] === NULL) {
                         <div class="line"></div>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="/pr/options/options.php">Home</a>
+                        <a class="dropdown-item" href="/pr/options/options.php" id="home"><i class="fa fa-home"></i> Home</a>
                         <li><hr class="dropdown-divider"></li>
                         <li><h6 class="dropdown-header">Beginner</h6></li>
                         <a class="dropdown-item active" href="html-page-1.php">HTML Web Development Introduction</a>

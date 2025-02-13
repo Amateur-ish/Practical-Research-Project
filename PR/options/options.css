@@ -63,12 +63,11 @@ header .logo {
 
 
 .cards {
+    position: relative;
     display: flex;
     justify-content: space-around;
-    position: relative; 
     top: 100px;
     margin-bottom: 200px;
-    overflow-x: auto;
 }
 
 .nav-cards {
@@ -122,9 +121,8 @@ header #logout:hover {
 
 .user-stats {
     position: relative;
-    width: 80%;
     background-color: white;
-    margin: auto;
+    margin: auto !important;
     padding-bottom: 150px;
     border: black 2px solid;
     border-radius: 10px;
@@ -140,5 +138,44 @@ header #logout:hover {
 
 }
 
+#arrowLeft {
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
 
+#arrowRight {
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+#arrowLeft:hover {
+    font-size: 50px;
+}
+
+#arrowRight:hover {
+    font-size: 50px;
+}
+
+.option-select {
+    overflow-x: hidden;
+    
+}
+
+.mvment {
+    transition: 0.3s ease-in-out;
+    left: 0px;
+}
+
+.img-card {
+    background-image: url('html-card.png');
+    background-position: 50% 35%;
+    background-color: grey;
+    background-size: 295px;
+    height:300px;
+    width:100%;
+}
+
+.card {
+    margin: 0px 10px 0px 10px;
+}
 
